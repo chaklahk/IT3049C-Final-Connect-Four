@@ -1,0 +1,23 @@
+.hidden{
+	display: none;
+}
+
+.header-footer{
+	text-align: center;
+}
+
+body, .header-footer{
+	background-color: #E0E0E0;
+}
+
+main{
+	background-color: white;
+}
+
+#instructions{
+	text-align:center;
+}
+
+canvas{
+	box-shadow: 2px 2px 2px 0px #909090;
+}

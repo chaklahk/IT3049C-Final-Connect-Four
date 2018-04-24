@@ -1,0 +1,87 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Connect Four</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<section>
+		<header>
+			<div class="jumbotron header-footer">
+				<h1>Connect Four</h1>
+				<p>Take turns placing pieces until someone connects four in a row!</p>
+			</div>
+		</header>
+		
+		<main>
+			<div class="well" id="instructions">
+				To play with two players, uncheck the Computer Opponent check box. Press start to begin.
+			</div>
+			
+			<div class="container">
+				<div id="start-screen">			
+					<h2>Game Settings</h2>
+
+					<form action="submit">
+						<input type="checkbox" id="checkComputer" checked>
+						<label>Computer Opponent</label>
+					
+						<div id="player-one-info">
+							<h3>Player 1 Information</h3>
+							<label>Name</label> <input type="text" id="inPOName" placeholder="Player 1"></input>
+							<br/>
+							<label>Color</label> <input type="color" id="inPOColor" value="#FF0000"></input>
+						</div>
+						
+						<div id="player-two-info" class="hidden">
+							<h3>Player 2 Information</h3>
+							<label>Name</label> <input type="text" id="inPTName" placeholder="Player 2"></input>
+							<br/>
+						</div>
+						
+						<div id="computer-info">
+							<h3>Computer Settings</h3>
+							
+							<label class="radio-inline"><input type="radio" name="difficulty-radio" id="rdEasy" value="easy" checked>Easy</label>
+							<label class="radio-inline"><input type="radio" name="difficulty-radio" id="rdHard" value="hard">Hard</label>
+						</div>
+						
+						<label>Color</label> <input type="color" id="inPTColor" value="#0000FF"></input>
+						
+						<button class="btn btn-primary btn-block" id="btnStart" type="submit">Start</button>
+					</form>
+				</div>
+				
+				<div id="game-screen" class="hidden">
+					<canvas id="connect-four-canvas" width=700 height=600></canvas>
+					
+					<p><strong><span id="player-turn"></span></strong>'s turn.</p>
+					<p><strong><span id="first-name"></span> Wins: </strong><span id="first-wins"></span></p>
+					<p><strong><span id="second-name"></span> Wins: </strong><span id="second-wins"></span></p>
+					
+					<button type="button" class="btn btn-default" id="btnMenu">Return to Menu</button>
+					<button type="button" class="btn btn-default" id="btnNewGame">New Game</button>
+
+				</div>
+			</div>
+		<main>
+		
+		<br/>
+		
+		<footer>
+			<div class="header-footer">
+				<p>Harshil Chaklashiya - IT 3049C - Final Project</p>
+				<p><a href="mailto:chaklahk@mail.uc.edu">chaklahk@mail.uc.edu</a></p>
+			</div>
+		</footer>
+	</section>
+	
+	<script type="text/javascript" src="game.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
